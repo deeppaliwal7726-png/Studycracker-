@@ -1,21 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Study Cracker</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0b1020;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 25px 20px 15px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .tagline {
+            color: #aab2c8;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .hero {
+            margin: 15px 20px;
+            padding: 25px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #172554, #312e81);
+        }
+
+        .hero h1 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #d8dded;
+            line-height: 1.5;
+        }
+
+        .start-btn {
+            margin-top: 20px;
+            padding: 13px 22px;
+            border: none;
+            border-radius: 12px;
+            background: white;
+            color: #172554;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .section-title {
+            margin: 28px 20px 15px;
+            font-size: 21px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #151b2f;
+            border: 1px solid #252d46;
+            border-radius: 18px;
+            padding: 20px 15px;
+            min-height: 125px;
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            color: #929bb4;
+            font-size: 12px;
+        }
+
+        .progress {
+            margin: 25px 20px;
+            padding: 20px;
+            background: #151b2f;
+            border-radius: 18px;
+            border: 1px solid #252d46;
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background: #292f43;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            width: 35%;
+            height: 100%;
+            background: #6366f1;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: #6f7891;
+            padding: 30px 20px 100px;
+            font-size: 13px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #111629;
+            border-top: 1px solid #252d46;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 5px;
+        }
+
+        .nav-item {
+            text-align: center;
+            color: #8d96ae;
+            font-size: 11px;
+        }
+
+        .nav-item span {
+            display: block;
+            font-size: 21px;
+            margin-bottom: 4px;
+        }
+
+        .active {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>🚀 Study Cracker</h1>
+    <header>
+        <div class="logo">🚀 Study Cracker</div>
+        <div class="tagline">Study smarter. Plan better. Crack your goals.</div>
+    </header>
 
-    <h2>Your Personal Study Website</h2>
+    <section class="hero">
+        <h1>Ready to study?</h1>
+        <p>
+            Organize your studies, track your progress
+            and make every study session count.
+        </p>
 
-    <p>Study smarter. Plan better. Crack your goals.</p>
+        <button class="start-btn">Start Studying →</button>
+    </section>
 
-    <button>Study Planner</button>
-    <button>Timetable</button>
-    <button>Calculator</button>
-    <button>AI Study Assistant</button>
+    <h2 class="section-title">Study Tools</h2>
+
+    <section class="features">
+
+        <div class="card">
+            <div class="icon">📅</div>
+            <h3>Study Planner</h3>
+            <p>Plan your daily tasks</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⏰</div>
+            <h3>Timetable</h3>
+            <p>Create your study schedule</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⏱️</div>
+            <h3>Focus Timer</h3>
+            <p>Study with Pomodoro</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧮</div>
+            <h3>Calculator</h3>
+            <p>Useful study calculations</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>AI Assistant</h3>
+            <p>Your AI study companion</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Progress</h3>
+            <p>Track your improvement</p>
+        </div>
+
+    </section>
+
+    <h2 class="section-title">Today's Progress</h2>
+
+    <div class="progress">
+        <div class="progress-top">
+            <span>Study Goal</span>
+            <span>35%</span>
+        </div>
+
+        <div class="bar">
+            <div class="bar-fill"></div>
+        </div>
+    </div>
+
+    <footer>
+        Study Cracker © 2026<br>
+        Built for students who want to crack their goals.
+    </footer>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active">
+            <span>🏠</span>
+            Home
+        </div>
+
+        <div class="nav-item">
+            <span>📋</span>
+            Planner
+        </div>
+
+        <div class="nav-item">
+            <span>🛠️</span>
+            Tools
+        </div>
+
+        <div class="nav-item">
+            <span>👤</span>
+            Profile
+        </div>
+    </nav>
 
 </body>
 </html>
